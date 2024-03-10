@@ -9,6 +9,12 @@ const App = () => {
         <Input />
 
         <Row>
+          <Button label={'*'} />
+          <Button label={'/'} />
+          <Button label={'C'} />
+          <Button label={'%'} />
+        </Row>
+        <Row>
           <Button label={7} />
           <Button label={8} />
           <Button label={9} />
@@ -25,6 +31,10 @@ const App = () => {
           <Button label={2} />
           <Button label={3} />
           <Button label={'='} />
+        </Row>
+        <Row>
+          <Button label={0} />
+          <Button label={'.'} />
         </Row>
 
       </Content>
