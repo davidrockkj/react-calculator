@@ -2,7 +2,9 @@ import { InputContainer } from "./styles";
 
 const Input = () => {
   return (
-    <InputContainer>Olá</InputContainer>
+    <InputContainer>
+      <input />
+    </InputContainer>
   );
 }
 
