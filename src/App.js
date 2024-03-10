@@ -11,7 +11,7 @@ const App = () => {
   }
 
   const handleAddNumber = (number) => {
-    setCurrentNumber( (prev) => `${prev}${number}`)
+    setCurrentNumber( (prev) => `${prev === '0' ? '' : prev}${number}`)
   }
 
   return (
