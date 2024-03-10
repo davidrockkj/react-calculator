@@ -6,6 +6,10 @@ import { useState } from "react";
 const App = () => {
   const [currentNumber, setCurrentNumber] = useState('');
 
+  const handleOnClear = () => {
+    setCurrentNumber('');
+  }
+
   const handleAddNumber = (number) => {
     setCurrentNumber( (prev) => `${prev}${number}`)
   }
@@ -18,7 +22,7 @@ const App = () => {
         <Row>
           <Button label={'*'} onClick={ () => handleAddNumber('*') } />
           <Button label={'/'} onClick={ () => handleAddNumber('/') } />
-          <Button label={'C'}  />
+          <Button label={'C'} onClick={handleOnClear} />
           <Button label={'%'} onClick={ () => handleAddNumber('%') } />
         </Row>
         <Row>
