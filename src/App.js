@@ -1,9 +1,11 @@
-import { Container } from "./styles";
+import { Container, Content } from "./styles";
 
 const App = () => {
   return (
     <Container>
-      <h1>Olá!</h1>
+      <Content>
+        <h1>Olá!</h1>
+      </Content>
     </Container>
   );
 }
