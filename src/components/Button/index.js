@@ -1,6 +1,8 @@
+import { ButtonContainer } from './styles.js'
+
 const Button = () => {
   return (
-    <Button className="Button"></Button>
+    <ButtonContainer>1</ButtonContainer>
   );
 }
 
