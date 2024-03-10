@@ -1,7 +1,10 @@
+import { Container } from "./styles";
+
 const App = () => {
   return (
-    <div className="App">
-    </div>
+    <Container>
+      <h1>Olá!</h1>
+    </Container>
   );
 }
 
