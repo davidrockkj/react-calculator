@@ -9,8 +9,8 @@ const App = () => {
   const [operation, setOperation] = useState('');
 
   const handleOnClear = () => {
-    setCurrentNumber('');
-    setFirstNumber('');
+    setCurrentNumber('0');
+    setFirstNumber('0');
     setOperation('');
   }
 
@@ -19,22 +19,32 @@ const App = () => {
   }
 
   const handleSumNumbers = () => {
+    console.log('handleSumNumbers')
     if (firstNumber === '0') {
-      setFirstNumber('0');
+      setFirstNumber(String(currentNumber));
+      setCurrentNumber('0');
       setOperation('+');
     }else{
       const sum = Number(firstNumber) + Number(currentNumber);
       setCurrentNumber(String(sum));
       setOperation('');
+      console.log('Somou: '+ sum)
     }
   }
 
   const handleEquals = () => {
-    if (!firstNumber === '0' && operation !== '') {
-      setFirstNumber(String(currentNumber));
-      setCurrentNumber('0');
-    }
+    console.log('handleEquals: ' + operation);
+    if (firstNumber !== '0' && operation !== '' && currentNumber !== '') {
+      switch (operation) {
+        case '+':
+          handleSumNumbers();
+          break;
+          
+        default:
+          break;
+      }
   }
+}
 
   return (
     <Container>
@@ -74,5 +84,6 @@ const App = () => {
     </Container>
   );
 }
+
 
 export default App;
